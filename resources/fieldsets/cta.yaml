@@ -1,0 +1,44 @@
+title: CTA
+fields:
+  -
+    handle: show_cta
+    field:
+      default: false
+      type: toggle
+      display: 'Show CTA'
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: cta_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'CTA Text'
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        show_cta: 'equals 1'
+  -
+    handle: cta_link
+    field:
+      type: link
+      display: 'CTA Link'
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        show_cta: 'equals 1'

@@ -1,0 +1,26 @@
+title: 'Block News'
+fields:
+  -
+    handle: show_all
+    field:
+      default: false
+      type: toggle
+      display: 'Alle anzeigen'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: number
+    field:
+      default: '3'
+      type: integer
+      display: Anzahl
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        show_all: 'equals false'

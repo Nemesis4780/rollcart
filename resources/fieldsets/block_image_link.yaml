@@ -1,0 +1,31 @@
+title: 'Block Bilderlink'
+fields:
+  -
+    handle: url
+    field:
+      type: link
+      display: Link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: image
+    field:
+      mode: list
+      container: images
+      folder: _various
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Bild
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_files: 1
+      min_files: 1

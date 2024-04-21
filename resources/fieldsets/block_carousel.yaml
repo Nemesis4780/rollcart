@@ -1,0 +1,50 @@
+title: 'Block Carousel'
+fields:
+  -
+    handle: elements
+    field:
+      fields:
+        -
+          handle: image
+          field:
+            max_files: 1
+            min_files: 1
+            mode: list
+            container: images
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Bild
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          import: title
+        -
+          handle: subtitle
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Untertitel
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          import: text
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Elemente
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,0 +1,12 @@
+.list-style-check {
+    ul {
+        padding-inline-start: 0;
+
+        li {
+            background: url("/public/svg/icons/primary_color/check-solid.svg") no-repeat scroll left 0px transparent;
+            background-size: 20px;
+            list-style: none;
+            padding-inline-start: 30px;
+        }
+    }
+}

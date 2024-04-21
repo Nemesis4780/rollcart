@@ -1,0 +1,59 @@
+title: Content
+data:
+  show_alert: false
+  alert_color_scheme: success
+  alert_text:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Ab dem 01.06.2022 müssen wir einen '
+        -
+          type: text
+          marks:
+            -
+              type: bold
+          text: 'temporären Material-Teuerungszuschlag von 10 % '
+        -
+          type: text
+          text: 'auf die im Katalog 22 angegebenen Preise erheben. Wir bitten um Verständnis und hoffen den Teuerungszuschlag in den nächsten Monaten zurücknehmen zu können.'
+  footer_text:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Möchten Sie Ihre Sichtbarkeit als Händler'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: 'im Internet erhöhen und damit von'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: 'einem weiteren Vertriebskanal'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: 'profitieren?'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Dann werden Sie Fachhändler von'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: ROLLCART.
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Setzen Sie sich mit uns in Verbindung. Gerne informieren wir Sie über die Vorteile unserer ROLLCART-Fachhändler und unser riesengroßes Produktspektrum'

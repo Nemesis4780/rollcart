@@ -1,0 +1,9 @@
+.swiper-pagination.swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+        @apply bg-black bg-opacity-20 mx-1 h-4 w-4 rounded-full cursor-pointer hover:bg-primary-500;
+
+        &.swiper-pagination-bullet-active {
+            @apply bg-primary-500;
+        }
+    }
+}

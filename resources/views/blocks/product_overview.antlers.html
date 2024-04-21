@@ -1,0 +1,57 @@
+<section class="block block-product-overview">
+    <div class="container mx-auto px-4">
+        <div class="row -mx-4 grid grid-cols-12">
+
+            <nav class="sidebar col-span-2 relative px-4">
+                <ul class="sticky top-0 flex flex-col
+                    border-x border-x-[1px] border-x-[#eeeeee]
+                    border-t border-t-[1px] border-t-[#eeeeee]
+                ">
+
+                    {{ collection:products sort="order" }}
+                        <li class="border-b border-b-[1px] border-b-[#eeeeee]">
+                            <a href="#{{ slug }}" class="p-3 text-xs block hover:bg-primary-500 hover:text-white">
+                                {{ title }}
+                            </a>
+                        </li>
+                    {{ /collection:products }}
+
+                </ul>
+            </nav>
+
+            <div class="category-container col-span-10 px-4 flex flex-col gap-y-12">
+
+                {{ nav:collection:products sort="order" }}
+                    <div id="{{ slug }}">
+                        <h4 class="uppercase text-xl text-primary-500 font-bold">{{ title }}</h4>
+                        <p>
+                            <a href="/{{ slug }}" class="hover:text-primary-500">
+                                <strong>Produkte</strong> und <strong>Video</strong> zu {{ title }} finden Sie <span class="text-primary-500">HIER </span>
+                            </a>
+                        </p>
+
+                        <div class="subcategoryy-container grid grid-cols-4">
+                            {{ children }}
+                                {{ partial:components/product_card }}
+                                {{#
+                                <a href="{{ url }}" class="card border-r border-r-[1px] border-r-[#eeeeee]">
+                                    <div class="card-body">
+                                        <div class="card-image h-[160px] relative">
+                                            <img src="{{ glide :src="image" height="160" }}" class="absolute object-contain w-full h-full">
+                                        </div>
+                                        <div class="text-center m-3">
+                                            {{ title }}
+                                        </div>
+                                    </div>
+                                </a>
+                                #}}
+
+                            {{ /children }}
+                        </div>
+                    </div>
+                {{ /nav:collection:products }}
+            </div>
+        </div>
+
+    </div>
+</section>

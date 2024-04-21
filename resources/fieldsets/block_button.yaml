@@ -1,0 +1,22 @@
+title: 'Block Button'
+fields:
+  -
+    import: alignment
+  -
+    handle: elements
+    field:
+      fields:
+        -
+          import: link
+        -
+          import: color_scheme
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Buttons
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

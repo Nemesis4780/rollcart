@@ -1,0 +1,125 @@
+<footer>
+    <div class="footer-info bg-[#e2e3e3]">
+        <div class="container mx-auto">
+
+            <div class="row grid grid-cols-12 py-8 gap-x-8 gap-y-16">
+
+                {{# PROFILE #}}
+                <div class="footer-profile col-span-12 md:col-span-6 xl:col-span-4 flex flex-col gap-8">
+                    <h3 class="uppercase font-bold">
+                        Unsere Fachhänder</br>
+                        <span class="text-primary-500">in Ihnrer Nähe</span>
+                    </h3>
+
+                    <div class="grid grid-cols-12 gap-x-2 gap-y-8">
+                        <div class="col-span-12 md:col-span-8 flex flex-col gap-y-8">
+
+                            <div class="prose !max-w-full list-style-check">
+                                {{ content.footer_text }}
+                            </div>
+
+                            <h3 class="uppercase font-bold">
+                                Besuchen Sie uns auch auf:
+                            </h3>
+
+                            <div class="footer-social-media">
+                                {{ partial:layout/footer_social_media }}
+                            </div>
+                        </div>
+
+                        <div class="footer-map col-span-12 md:col-span-4">
+                            <img src="/img/map.png">
+                        </div>
+                    </div>
+
+
+                </div>
+                {{# END PROFILE #}}
+
+
+                {{# CONTACT #}}
+                <div class="footer-contact col-span-12 md:col-span-6 xl:col-span-4 flex flex-col gap-y-8">
+                    <h3 class="uppercase font-bold">
+                        Kontakt</br>
+                    </h3>
+
+                    <div>
+                        {{ contact.name }}<br>
+                        {{ contact.street }} {{ contact.house_number }} - {{  contact.zip }} {{ contact.place }}
+                    </div>
+
+                    <div>
+                        <div class="grid grid-cols-12">
+                            <div class="col-span-2">Telefon</div>
+                            <a href="tel: {{ contact.phone }}" class="col-span-10 text-primary-500 hover:underline">
+                                {{ contact.phone }}
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-12">
+                            <div class="col-span-2">Telefax</div>
+                            <div class="col-span-10">{{ contact.fax }}</div>
+                        </div>
+                        <div class="grid grid-cols-12">
+                            <div class="col-span-2">E-Mail</div>
+                            <a href="mailto: {{ contact.email }}" class="col-span-10 text-primary-500 hover:underline">
+                                {{ contact.email }}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img class="w-full max-w-[251px]" title="ROLLCART" alt="ROLLCART" src="/img/logo.png">
+                    </div>
+                </div>
+                {{# END CONTACT #}}
+
+
+                {{# SHOP #}}
+                <div class="footer-shop col-span-12 md:col-span-6 xl:col-span-4 flex flex-col gap-y-8">
+                    <h3 class="uppercase font-bold">
+                        Rollcart Shop</br>
+
+                        <span class="text-primary-500">Aktuelle Angebote</span>
+
+                    </h3>
+
+                    <div>Hier gelangen Sie zu unserem Shop</div>
+
+                    <div>
+                        {{ partial:components/button url="/produkte" color_scheme="primary" title="Zum Shop" }}
+                    </div>
+                </div>
+                {{# END SHOP #}}
+
+
+            </div>
+            {{# CONTACT #}}
+
+
+        </div>
+    </div>
+
+
+
+    <div class="footer-bootom bg-white">
+        <div class="container mx-auto">
+            <div class="row flex flex-col md:flex-row md:justify-between py-6">
+                <div class="">
+                    © 2024 Gabriel Transportsysteme GmbH
+                </div>
+                <ul class="flex">
+
+                    {{ nav:footer }}
+                        <li>
+                            <a href="{{ url }}" class="p-4 hover:text-primary-500 hover:underline">{{ title }}</a>
+                        </li>
+                    {{ /nav:footer }}
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</footer>

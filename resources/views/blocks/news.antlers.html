@@ -1,0 +1,28 @@
+<section class="block block-news">
+    <div class="container mx-auto">
+        <div class="row">
+
+            <div class="news-container flex flex-col gap-y-6">
+
+                {{# SHOW ALL #}}
+                {{ if show_all == 1}}
+                    {{ limit = 0 }}
+                {{ /if }}
+
+                {{# NEWS COLLECTION #}}
+                {{ collection:news sort="published:desc" limit="{{limit}}" }}
+
+                    <div class="news-element">
+                        <a href="{{ url }}" class="font-bold text-primary-500">{{ title }}</a>
+                        <small>{{ date| format('d.m.Y') }}</small>
+                        <div>{{ subtitle }}</div>
+                    </div>
+
+                {{ /collection:news }}
+                {{# END NEWS COLLECTION #}}
+
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,75 @@
+<section class="block block-download">
+
+    <div class="container mx-auto">
+        <div class="row">
+
+            {{# BLOCK HEADER #}}
+            <div class="block-header">
+                {{ if title }}
+                    <div class="block-title">
+                        {{ partial:components/title }}
+                    </div>
+                {{ /if }}
+
+                {{ if text }}
+                <div class="block-text prose">
+                    {{ text }}
+                </div>
+                {{ /if }}
+            </div>
+            {{# END BLOCK HEADER #}}
+
+
+            {{# BLOCK CONTENT #}}
+            <div class="block-content">
+                <div class="download-container flex flex-col gap-2">
+                    {{ elements }}
+                        {{ if file }}
+
+                            <div class="download-element">
+
+                                <a href="/storage/assets/files/{{ file.path }}" target="_blank" class="btn btn-secondary flex gap-x-2 w-fit items-center" download>
+                                    {{# FILE ICON #}}
+                                    <span>
+                                        {{ if file.is_image }}
+                                            {{ svg src="/svg/icons/current_color/file-image-solid" class="h-5 w-5" }}
+                                        {{ elseif file.is_video }}
+                                            {{ svg src="/svg/icons/current_color/file-video-solid" class="h-5 w-5" }}
+                                        {{ elseif file.is_audio }}
+                                            {{ svg src="/svg/icons/current_color/file-audio-solid" class="h-5 w-5" }}
+                                        {{ elseif file.extension == 'pdf' }}
+                                            {{ svg src="/svg/icons/current_color/file-pdf-solid" class="h-5 w-5" }}
+                                        {{ elseif file.extension == 'zip' || file.extension == 'rar' }}
+                                            {{ svg src="/svg/icons/current_color/file-zipper-solid" class="h-5 w-5" }}
+                                        {{ elseif file.extension == 'csv' }}
+                                            {{ svg src="/svg/icons/current_color/file-csv-solid" class="h-5 w-5" }}
+                                        {{ else }}
+                                            {{ svg src="/svg/icons/current_color/file-solid" class="h-5 w-5" }}
+                                        {{ /if }}
+                                    </span>
+
+
+                                    {{# FILE TITLE #}}
+                                    <span>
+                                        {{ if title }} {{ title }} {{ else }} Download {{ /if }}
+                                    </span>
+
+
+                                    {{# FILE SIZE #}}
+                                    <span class="font-thin">
+                                        ({{ file.size }})
+                                    </span>
+
+                                </a>
+                            </div>
+
+                        {{ /if }}
+                    {{ /elements }}
+                </div>
+            </div>
+            {{# BLOCK END CONTENT #}}
+
+        </div>
+    </div>
+
+</section>

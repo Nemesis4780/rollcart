@@ -1,0 +1,8 @@
+title: 'Block Alert'
+fields:
+  -
+    import: color_scheme
+  -
+    import: title
+  -
+    import: text

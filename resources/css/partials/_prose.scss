@@ -1,0 +1,13 @@
+.prose {
+    a {
+        @apply text-primary-500 no-underline hover:underline;
+    }
+    ul {
+        &>li {
+            @apply m-0;
+            p {
+                @apply m-0;
+            }
+        }
+    }
+}

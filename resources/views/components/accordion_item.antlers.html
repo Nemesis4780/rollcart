@@ -1,0 +1,11 @@
+<div class="accordion-item">
+    <input type="radio" id="accordion-toggle-{{ block_index }}" class="accordion-toggle" />
+    <label for="accordion-toggle-{{ block_index }}" class="accordion-label">
+        {{ slot:label }}
+    </label>
+    <div class="accordion-content">
+        <div class="min-h-0">
+            {{ slot:content }}
+        </div>
+    </div>
+</div>

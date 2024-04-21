@@ -1,0 +1,72 @@
+<div id="seller-catalog-{{ block_index }}" class="seller-catalog">
+
+    <div class="cards grid grid-cols-1 md:grid-cols-2 gap-8">
+
+{{#         {{ seller:catalogShippers }} #}}
+        {{ collection:sellers sort="order" is_catalog_shipper:is="true" }}
+
+            <div class="card ">
+                <div class="card-header">
+                    <div class="card-title inline-block px-6 py-4 border border-[1px] border-[#e2e3e3]" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, .1) 100%);">
+                        <a href="#" class="text-primary-500 font-bold hover:underline" target="_blank">
+                            {{ name }}
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body text-[#575756] border-[1px] border-[#e2e3e3] px-6 py-4 flex flex-col md:flex-row gap-4">
+
+                    <div class="">
+                        <a href="#" class="text-primary-500 font-bold hover:underline" target="_blank">
+{{#                             <img src="/storage/assets/images/{{ catalog_cover }}" class="p-4"/> #}}
+                            <img src="{{ glide :src="catalog_cover" }}" class="p-4"/>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <strong>{{ name }}</strong><br>
+                            {{ street }} {{ street_number }}<br>
+                            {{ zip }} {{ place }}
+                        </div>
+                        <div class="grid grid-cols-3">
+                            {{ if phone }}
+                                <div class="col-span-2">Telefon</div>
+                                <div class="col-span-1">
+                                    <a href="tel:{{ phoen }}" class="text-primary-500 hover:underline">{{ phone }}</a>
+                                </div>
+                            {{ /if }}
+
+                            {{ if fax }}
+                                <div class="col-span-2">Fax</div>
+                                <div class="col-span-1">{{ fax }}</div>
+                            {{ /if }}
+
+                            {{ if email }}
+                                <div class="col-span-2">E-Mail</div>
+                                <div class="col-span-1">
+                                    <a href="mailto: {{ email }}" class="text-primary-500 hover:underline">{{ email }}</a>
+                                </div>
+                            {{ /if }}
+                        </div>
+                        <div class="flex">
+                            <a href="mailto: {{ email }}" class="btn btn-secondary uppercase flex gap-x-2 items-center">
+                                <span class="whitespace-nowrap">Katalog anfragen</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        {{ /collection:sellers sort="order" is_catalog_shipper:is="true" }}
+{{#         {{ /seller:catalogShippers }} #}}
+
+    </div>
+
+</div>
+

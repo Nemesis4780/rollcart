@@ -1,0 +1,69 @@
+.tabs {
+
+    .tab-content {
+        &:not(.active) {
+            @apply hidden;
+        }
+        &.active {
+            @apply block;
+        }
+    }
+
+    /* STYLE TOP */
+    &[data-style="top"] {
+        .tab {
+            &:not(.active) {
+                background: linear-gradient(0deg, rgba(0, 0, 0, .05) 0, rgba(0, 0, 0, 0) 30%);
+            }
+            &.active {
+                @apply text-primary-500 bg-[#f4f4f5] border border-[1px] border-[#e2e3e3] m-[-1px];
+            }
+        }
+    }
+
+    /* STYLE RIGHT */
+    &[data-style="right"] {
+        .tab {
+            &:not(.active) { }
+            &.active {
+                @apply bg-primary-500 font-bold;
+            }
+        }
+    }
+
+}
+
+
+
+/* DEFAULT AND NECESSARY */
+/*
+.tabs {
+    .radio-tab + label {
+        @apply cursor-pointer;
+    }
+    .radio-tab {
+        @apply hidden h-0 w-0 absolute w-0 z-[-1];
+    }
+    .radio-tab + label + .tab-content {
+        @apply hidden;
+    }
+    .radio-tab:checked + label + .tab-content {
+        @apply block;
+    }
+}
+*/
+/* END DEFAULT */
+
+
+/* CuSTOM STYLE */
+/*
+.block-tab-container {
+    .radio-tab + label {
+        background: linear-gradient(0deg, rgba(0, 0, 0, .05) 0, rgba(0, 0, 0, 0) 30%);
+
+    }
+    .radio-tab:checked + label {
+        @apply text-primary-500 bg-[#f4f4f5] border border-[1px] border-[#e2e3e3] m-[-1px];
+    }
+}
+*/

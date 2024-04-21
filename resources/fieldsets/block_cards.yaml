@@ -1,0 +1,47 @@
+title: 'Block Cards'
+fields:
+  -
+    handle: elements
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            directory: public/svg/fontawesome
+            folder: solid
+            type: icon
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            width: 33
+        -
+          handle: card_title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Titel
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            width: 66
+        -
+          import: text
+        -
+          import: link
+          prefix: link_
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Elemente
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

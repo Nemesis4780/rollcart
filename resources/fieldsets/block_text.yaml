@@ -1,0 +1,36 @@
+title: 'Block Text'
+fields:
+  -
+    import: title
+  -
+    handle: cols
+    field:
+      options:
+        one: 'Text einspaltig'
+        two: 'Text zweispaltig'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: one
+      type: select
+      display: Spalten
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text_left
+    field: text.text
+    config:
+      display: 'Text (Spalte 1)'
+  -
+    handle: text_right
+    field: text.text
+    config:
+      display: 'Text (Spalte 2)'
+      if:
+        cols: 'equals two'

@@ -1,0 +1,24 @@
+{{# SOCIAL MEDIA #}}
+{{ if contact.facebook || contact.youtube || contact.xing || contact.induuc }}
+
+        <ul class="flex gap-2">
+            {{ if contact.facebook }}
+                <li><a href="{{ contact.facebook }}" target="_blank"><img src="/img/social_media/facebook.jpg"/></a></li>
+            {{ /if }}
+
+            {{ if contact.youtube }}
+                <li><a href="{{ contact.youtube }}" target="_blank"><img src="/img/social_media/youtube.jpg"/></a></li>
+            {{ /if }}
+
+            {{ if contact.xing }}
+                <li><a href="{{ contact.xing }}" target="_blank"><img src="/img/social_media/xing.jpg"/></a></li>
+            {{ /if }}
+
+            {{ if contact.induux }}
+                <li><a href="{{ contact.induux }}" target="_blank"><img src="/img/social_media/induux.png"/></a></li>
+            {{ /if }}
+
+        </ul>
+
+{{ /if }}
+{{# END SOCIAL MEDIA #}}

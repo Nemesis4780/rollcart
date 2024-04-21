@@ -1,0 +1,61 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Titel
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: product_id
+            field:
+              max_items: 1
+              mode: default
+              resource: product
+              create: true
+              type: belongs_to
+              display: Produkt
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: sort_order
+            field:
+              type: integer
+              display: Sortierung
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              from: title
+              generate: true
+              show_regenerate: false
+              type: slug
+              display: Slug
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+title: Produkt-Variante

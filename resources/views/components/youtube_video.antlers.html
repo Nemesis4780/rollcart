@@ -1,0 +1,29 @@
+<div class="flex flex-col gap-y-5">
+    <strong>{{ title }}</strong>
+
+    <div id="youtube-video-container-{{ youtube_id }}" class="flex h-[270px] min-w-[480px] w-full">
+
+        <div id="youtube-video-warning-{{ youtube_id }}" class="flex">
+
+            <div class="h-full bg-[#e8e9e8] flex flex-col p-4 justify-around items-center">
+                <small class="leading-5 text-[#575756]">
+                    Mit dem Aufruf des Videos erklären Sie sich einverstanden, dass Ihre Daten an YouTube übermittelt werden und dass Sie die Datenschutzerklärung gelesen haben.
+                </small>
+                <button type="button" class="activateContent btn btn-secondary flex items-center gap-x-2 w-fit"
+                        data-content='<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                        data-content-container="#youtube-video-container-{{ youtube_id }}"
+                        data-warning="#youtube-video-warning-{{ youtube_id }}"
+                >
+                    <span>Video abspielen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5">
+                        <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <img src="/img/logo.png" class="max-h-[60px]">
+            </div>
+
+        </div>
+    </div>
+    <div>{{ text }}</div>
+
+</div>

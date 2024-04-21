@@ -1,0 +1,16 @@
+title: 'Block Tab'
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Titel
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: subblocks

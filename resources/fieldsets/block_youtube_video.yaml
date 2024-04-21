@@ -1,0 +1,51 @@
+title: 'Block Youtube Video'
+fields:
+  -
+    handle: elements
+    field:
+      fields:
+        -
+          handle: youtube_id
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Youtube_ID
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Titel
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: text
+          field:
+            antlers: false
+            type: textarea
+            display: Text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Elemente
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

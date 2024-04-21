@@ -1,0 +1,20 @@
+<section class="block block-text">
+    <div class="container mx-auto">
+
+        {{ if title }}
+            <div class=" uppercase text-primary-500 text-xl font-bold">
+                {{ title }}
+            </div>
+            {{ partial:components/hr }}
+        {{ /if }}
+
+        <div class="row grid {{ if cols == "two" }} grid-cols-2 {{ else }} grid-cols-1 {{ /if }} gap-x-8 prose max-w-[100%]">
+
+            <div>{{ text_left }}</div>
+
+            {{ if cols == "two" }}
+                <div>{{ text_right }}</div>
+            {{ /if }}
+        </div>
+    </div>
+</section>

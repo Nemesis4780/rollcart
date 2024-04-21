@@ -1,0 +1,38 @@
+title: Link
+fields:
+  -
+    handle: url
+    field:
+      type: link
+      display: url
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Titel
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: blank
+    field:
+      default: false
+      type: toggle
+      display: 'In neuem Tab öffnen'
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

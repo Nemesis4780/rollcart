@@ -1,0 +1,43 @@
+title: 'Block Zweispaltiges Layout'
+fields:
+  -
+    handle: ratio
+    field:
+      options:
+        1to1: '1 zu 1'
+        2to1: '2 zu 1'
+        1to2: '1 zu 2'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: 2to1
+      type: select
+      display: Spaltenverhältnis
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: title_left
+    field: title.title
+    config:
+      display: 'Titel (linke Spalte)'
+  -
+    handle: blocks_left
+    field: subblocks.blocks
+    config:
+      display: 'Blocks (linke Spalte)'
+  -
+    handle: title_right
+    field: title.title
+    config:
+      display: 'Titel (rechte Spalte)'
+  -
+    handle: blocks_right
+    field: subblocks.blocks
+    config:
+      display: 'Blocks (rechte Spalte)'

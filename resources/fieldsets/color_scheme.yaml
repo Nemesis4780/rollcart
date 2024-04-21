@@ -1,0 +1,29 @@
+title: Farbschema
+fields:
+  -
+    handle: color_scheme
+    field:
+      options:
+        default: Standard
+        primary: Primär
+        secondary: Sekundär
+        success: Erfolg
+        danger: Fehler
+        warning: Warnung
+        info: Information
+        light: Hell
+        dark: Dunkel
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: default
+      type: select
+      display: Farbschema
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

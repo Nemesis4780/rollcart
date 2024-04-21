@@ -1,0 +1,158 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Anschrift
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: street
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Straße
+              width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: house_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Hausnummer
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: zip
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Postleitzahl
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: Place
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Ort
+              width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Telefon
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: fax
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Telefax
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: E-Mail
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Social Media'
+        fields:
+          -
+            handle: facebook
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Facebook
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: youtube
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Youtube
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: xing
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Xing
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: induux
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Induux
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

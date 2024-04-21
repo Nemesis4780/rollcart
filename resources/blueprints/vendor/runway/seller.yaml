@@ -1,0 +1,286 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Händler
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: logo
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: images
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Logo
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              folder: seller/logo
+          -
+            handle: sort_order
+            field:
+              type: integer
+              display: Sortierung
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Adresse
+        fields:
+          -
+            handle: street
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Straße
+              width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: street_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Hausnummer
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: zip
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Postleitzahl
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: place
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Ort
+              width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: country_id
+            field:
+              max_items: 1
+              mode: default
+              resource: country
+              create: true
+              type: belongs_to
+              display: Land
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Kontakt
+        fields:
+          -
+            handle: url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: E-Mail
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Telefon
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: fax
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Fax
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Typ
+        fields:
+          -
+            handle: is_specialist
+            field:
+              default: false
+              type: toggle
+              display: Fachhändler
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
+          -
+            handle: is_online_seller
+            field:
+              default: false
+              type: toggle
+              display: Internethändler
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
+          -
+            handle: is_catalog_shipper
+            field:
+              default: false
+              type: toggle
+              display: Katalogversender
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
+      -
+        display: Fachhändler
+        fields:
+          -
+            handle: latitude
+            field:
+              type: float
+              display: Breitengrad
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: longitude
+            field:
+              type: float
+              display: Längengrad
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Internethändler
+        fields:
+          -
+            handle: text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Katalogversender
+        fields:
+          -
+            handle: catalog_cover
+            field:
+              max_files: 1
+              mode: list
+              container: images
+              folder: seller/catalog_cover
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Katalog Cover'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: Händler

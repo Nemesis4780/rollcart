@@ -1,0 +1,23 @@
+<section class="block block-gallery">
+    <div class="container mx-auto">
+        <div class="row">
+
+            <div class="spotlight-group grid md:grid-cols-2 lg:grid-cols-4 gap-4" data-fit="contain" data-autohide="all">
+
+                {{ image }}
+                {{ /image }}
+
+                {{ loop times="10" }}
+                    <a class="spotlight w-full" href="https://shop.rollcart.de/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/0/2/02-5988-06.jpg"
+                       data-description="">
+                        <img src="https://shop.rollcart.de/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/0/2/02-5988-06.jpg"
+                             alt="Lorem ipsum dolor sit amet"
+                        >
+                    </a>
+                {{ /loop }}
+
+            </div>
+
+        </div>
+    </div>
+</section>

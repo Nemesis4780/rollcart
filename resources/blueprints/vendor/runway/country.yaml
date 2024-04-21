@@ -1,0 +1,44 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Titel
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: title_short
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Abkürzung
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - null
+                - 'max:2'
+          -
+            handle: sort_order
+            field:
+              type: integer
+              display: Sortierung
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+title: Land

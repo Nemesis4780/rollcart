@@ -1,0 +1,48 @@
+title: 'Block Tab Container'
+fields:
+  -
+    handle: style
+    field:
+      options:
+        top: 'Tabs (oben)'
+        right: 'Reiter (rechts)'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: top
+      type: select
+      display: 'Tab Design'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: elements
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        interactiv:
+          display: Interaktiv
+          instructions: null
+          icon: null
+          sets:
+            tab:
+              display: Tab
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_tab
+      type: replicator
+      display: Elemente
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

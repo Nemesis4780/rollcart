@@ -1,0 +1,82 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* COMPONENTS - INTERACTIVE */
+/*@import './partials/_col.scss';*/
+@import './partials/_tabs.scss';
+@import './partials/_carousel.scss';
+@import './partials/_map.scss';
+@import './partials/_accordion.scss';
+
+
+/* COMPONENTS - STYLE*/
+/* ... */
+@import './partials/_alert.scss';
+@import './partials/_button.scss';
+
+
+/* FONTS AND TEXT */
+@import './partials/_fonts.scss';
+@import './partials/_prose.scss';
+@import './partials/_text.scss';
+@import './partials/_print.scss';
+
+
+
+@layer utilities {
+    @variants responsive {
+        .overflow-unset {
+            overflow: unset;
+        }
+    }
+}
+
+
+/* QUICK AND DIRTY MARGENING */
+section {
+    @apply my-4;
+}
+
+
+body {
+    @apply text-[#575756];
+}
+
+
+
+
+#product-container {
+
+    &[data-style='grid'] {
+        @apply grid-cols-10;
+        .card-body {
+            .card-text {
+                @apply hidden;
+            }
+        }
+    }
+    &[data-style='row'] {
+        @apply grid-cols-1;
+        .card-body {
+            @apply flex gap-x-8;
+            .card-title {
+                @apply text-left;
+            }
+        }
+        .card-image {
+            @apply w-[240px] h-[240px] border border-[1px] border-[#ededed];
+        }
+    }
+
+
+    .card-wrapper {
+
+    }
+
+}
+
+
+
+

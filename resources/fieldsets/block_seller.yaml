@@ -1,0 +1,23 @@
+title: 'Block Händler'
+fields:
+  -
+    handle: seller_type
+    field:
+      options:
+        map: 'Fachhändler (Karte)'
+        internet: Internethändler
+        catalog: Katalogversender
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: map
+      type: select
+      display: Händlertyp
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

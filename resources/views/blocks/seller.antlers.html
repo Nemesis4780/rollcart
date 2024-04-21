@@ -1,0 +1,14 @@
+<section class="block-seller">
+    <div class="container mx-auto">
+
+        {{ if seller_type == 'map' }}
+            {{ partial:blocks/seller/seller_map }}
+        {{ elseif seller_type == 'internet' }}
+            {{ partial:blocks/seller/seller_internet }}
+        {{ elseif seller_type == 'catalog' }}
+            {{ partial:blocks/seller/seller_catalog }}
+        {{ /if }}
+
+    </div>
+</section>
+

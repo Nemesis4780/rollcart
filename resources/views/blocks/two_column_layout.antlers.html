@@ -1,0 +1,39 @@
+<section class="block block-two-column-layout">
+    <div class="container mx-auto">
+        <div class="row grid grid-cols-12 ">
+
+
+            {{# BLOCKS LEFT #}}
+            <div class="column-left col-span-12 md:col-span-6 {{ if ratio == "1to1" }} lg:col-span-6 {{ elseif ratio == "2to1" }} lg:col-span-8 {{ elseif ratio == "1to2" }} lg:col-span-4 {{ /if }} border-r border-r-[1px] border-r-[#e2e3e3] md:pr-8">
+
+                {{ if title_left }}
+                    {{ partial:components/title :title="title_left" }}
+                {{ /if }}
+
+                <div class="flex flex-col">
+                    {{ blocks_left }}
+                        {{ partial:if_exists src="blocks/{type}" :block_index="index" }}
+                    {{ /blocks_left }}
+                </div>
+            </div>
+            {{# END BLOCKS LEFT #}}
+
+
+            {{# BLOCKS RIGHT #}}
+            <div class="column-right col-span-12 md:col-span-6 {{ if ratio == "1to1" }} lg:col-span-6 {{ elseif ratio == "2to1" }} lg:col-span-4 {{ elseif ratio == "1to2" }} lg:col-span-8 {{ /if }} md:pl-8">
+
+                {{ if title_right }}
+                    {{ partial:components/title :title="title_right" }}
+                {{ /if }}
+
+                <div class="flex flex-col">
+                    {{ blocks_right }}
+                        {{ partial:if_exists src="blocks/{type}" :block_index="index" }}
+                    {{ /blocks_right }}
+                </div>
+            </div>
+            {{# END BLOCKS RIGHT #}}
+
+        </div>
+    </div>
+</section>

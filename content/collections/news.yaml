@@ -1,0 +1,16 @@
+title: '📰 News'
+template: default
+layout: layout
+mount: 9c1cb23b-e1e8-49f5-8932-5fedf09a8537
+revisions: false
+route: '{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

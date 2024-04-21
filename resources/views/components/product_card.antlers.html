@@ -1,0 +1,13 @@
+<a href="{{ url }}" class="card border-r border-r-[1px] border-r-[#eeeeee] bg-white block
+    shadow-none hover:scale-105 hover:shadow-md duration-100 ease-in-out
+">
+    <div class="card-body">
+        <div class="card-image h-[160px] w-full relative">
+            <img src="{{ glide :src="image" height="160" }}" class="absolute object-contain w-full h-full">
+        </div>
+        <div class="m-3 ">
+            <div class="card-title text-center font-bold">{{ title }}</div>
+            <div class="card-text prose list-style-check">{{ short_description }}</div>
+        </div>
+    </div>
+</a>

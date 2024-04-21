@@ -1,0 +1,68 @@
+<section class="block block-columns">
+    <div class="container mx-auto">
+        <div class="row grid grid-cols-1 md:grid-cols-12 gap-x-8">
+            <div class="column-left flex flex-col {{ if ratio == '1to1' }} col-span-1 md:col-span-6 {{ elseif ratio == '1to2' }} col-span-1 md:col-span-4 {{ else }} col-span-1 md:col-span-8 {{ /if }}">
+                <div>
+                    {{ if title_left }}
+                        <h2 class="text-xl uppercase">{{ title_left }}</h2>
+                        {{ partial:components/hr }}
+                    {{ /if }}
+
+                    {{ if column_left == 'text' }}
+                        <div class="prose">{{ text_left }}</div>
+                    {{ elseif column_left == 'images' }}
+                    {{ elseif column_left == 'youtube' }}
+                    {{ elseif column_left == 'news' }}
+                    {{ /if }}
+                </div>
+
+                {{ if url_left }}
+                    <div class="mt-auto">
+                        <a href="{{ url_left.url }}" class="btn btn-secondary flex gap-x-2 items-center w-fit mt-8">
+                            <span class="whitespace-nowrap">Mehr Info</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5">
+                                <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                {{ /if }}
+            </div>
+
+            <div class="column-right flex flex-col {{ if ratio == '1to1' }} col-span-1 md:col-span-6 {{ elseif ratio == '1to2' }}col-span-1 md:col-span-8 {{ else }} col-span-1 md:col-span-4 {{ /if }}">
+                <div>
+                    {{ if title_right }}
+                        <h2 class="text-xl uppercase">{{ title_right }}</h2>
+                        {{ partial:components/hr }}
+                    {{ /if }}
+                </div>
+
+                {{ if column_right == 'text' }}
+                    <div class="prose">{{ text_right }}</div>
+                {{ elseif column_right == 'images' }}
+                {{ elseif column_right == 'youtube' }}
+                {{ elseif column_right == 'news' }}
+                    <div class="news-container flex flex-col gap-y-6">
+                        {{ collection:news sort="published:desc" limit=3 }}
+                            <div class="news-item">
+                                <a href="{{ url }}" class="font-bold text-primary-500">{{ title }}</a>
+                                <small>{{ date| format('d.m.Y') }}</small>
+                                <div>{{ subtitle }}</div>
+                            </div>
+                        {{ /collection:news }}
+                    </div>
+                {{ /if }}
+
+                {{ if url_right }}
+                    <div class="mt-auto">
+                        <a href="{{ url_right.url }}" class="btn btn-secondary flex gap-x-2 items-center w-fit mt-8">
+                            <span class="whitespace-nowrap">Mehr Info</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5">
+                                <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

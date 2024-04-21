@@ -1,0 +1,26 @@
+title: Font
+fields:
+  -
+    handle: font_size
+    field:
+      options:
+        'text-7xl lg:text-9xl': Title
+        'text-6xl lg:text-8xl': Headline
+        'text-5xl lg:text-7xl': 'Headline 2'
+        'text-2xl lg:text-3xl': 'Bigger Text'
+        'text-xl lg:text-2xl': Text
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Font Size'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      default: 'text-xl lg:text-2xl'

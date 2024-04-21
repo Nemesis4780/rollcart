@@ -1,0 +1,45 @@
+<div class="container mx-auto max-w-[1140px]">
+    <div class="header-top-bar h-[142px] grid grid-cols-12">
+
+        <div class="header-logo col-span-3 self-center">
+            <a href="/">
+                <img alt="ROLLCART" src="/img/logo.png" width="251" height="78">
+            </a>
+
+        </div>
+
+        <div class="header-slogan col-span-5 self-center">
+            <div class="text-center uppercase text-primary-500 font-bold text-lg">
+                Starke Marke<br>Starker Hersteller
+            </div>
+        </div>
+
+        <div class="header-search col-span-4 self-center">
+            SEARCH
+        </div>
+
+    </div>
+
+    <nav class="navbar flex justify-center"
+         style="background: linear-gradient(90deg, #fff 0, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #fff 100%), linear-gradient(180deg, rgba(0, 0, 0, .05) 0, rgba(0, 0, 0, 0) 30%);"
+    >
+
+        <ul class="flex flex-wrap">
+            {{ nav:main }}
+                <li class="nav-item relative py-6 uppercase group overflow-hidden">
+                    <a href="{{ url }}" class="p-6 group-hover:text-primary-500">{{ title }}</a>
+
+                    <div class="absolute left-1/2 top-0 -translate-y-1/2 -translate-x-1/2 rotate-45 h-4 w-4 block bg-white pointer-events-none z-[15] opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute left-1/2 top-0 -translate-y-1/2 -translate-x-1/2 rotate-45 h-4 w-4 block bg-black blur-[2px] pointer-events-none z-[10] opacity-0 group-hover:opacity-50"></div>
+
+                </li>
+            {{ /nav:main }}
+
+        </ul>
+
+    </nav>
+    <nav class="navbar"></nav>
+
+
+
+</div>

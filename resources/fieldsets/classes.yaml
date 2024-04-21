@@ -1,0 +1,30 @@
+title: Classes
+fields:
+  -
+    handle: block_css_classes
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Block CSS Classes'
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: content_css_classes
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Content CSS Classes'
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

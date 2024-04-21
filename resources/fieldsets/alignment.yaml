@@ -1,0 +1,23 @@
+title: Ausrichtung
+fields:
+  -
+    handle: alignment
+    field:
+      options:
+        left: Links
+        center: Zentriert
+        right: Rechts
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: left
+      type: select
+      display: Ausrichtung
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

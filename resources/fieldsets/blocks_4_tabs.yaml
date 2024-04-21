@@ -1,0 +1,141 @@
+title: 'Blocks (reduzierte Auswahl) (4tabs)'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        image:
+          display: Bilder
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+        file:
+          display: Datei
+          instructions: null
+          icon: null
+          sets:
+            download:
+              display: Download
+              instructions: null
+              icon: calendar-date
+              fields:
+                -
+                  import: block_download
+        form:
+          display: Formular
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+        text:
+          display: Text
+          instructions: null
+          icon: null
+          sets:
+            headline:
+              display: Headline
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_headline
+            text:
+              display: Text
+              instructions: null
+              icon: text-formatting-all-caps
+              fields:
+                -
+                  import: block_text
+            cards:
+              display: Cards
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_cards
+            alert:
+              display: Hinweis
+              instructions: null
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  import: block_alert
+        interactiv:
+          display: Interaktiv
+          instructions: null
+          icon: null
+          sets:
+            carousel:
+              display: Carousel
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_carousel
+            seller:
+              display: Verkäufer
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_seller
+            tab_container:
+              display: 'Tab Container'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_tab_container
+        navigation:
+          display: Navigation
+          instructions: null
+          icon: null
+          sets:
+            button:
+              display: Button
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_button
+        videos:
+          display: Videos
+          instructions: null
+          icon: null
+          sets:
+            youtube_video:
+              display: 'YouTube Videos'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_youtube_video
+        produkt:
+          display: Produkt
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+      type: replicator
+      display: Blocks
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

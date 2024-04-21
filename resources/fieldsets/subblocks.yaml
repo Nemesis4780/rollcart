@@ -1,0 +1,170 @@
+title: 'Blocks (reduzierte Auswahl)'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        rollcart:
+          display: Rollcart
+          instructions: null
+          icon: home-house
+          sets: {  }
+        image:
+          display: Bild
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+        file:
+          display: Datei
+          instructions: null
+          icon: null
+          sets:
+            download:
+              display: Download
+              instructions: null
+              icon: download-arrow-down
+              fields:
+                -
+                  import: block_download
+        form:
+          display: Formular
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+        text:
+          display: Text
+          instructions: null
+          icon: null
+          sets:
+            headline:
+              display: Headline
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_headline
+            text:
+              display: Text
+              instructions: null
+              icon: text-formatting-all-caps
+              fields:
+                -
+                  import: block_text
+            cards:
+              display: Cards
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_cards
+            alert:
+              display: Hinweis
+              instructions: null
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  import: block_alert
+            news:
+              display: News
+              instructions: null
+              icon: tag-new
+              fields:
+                -
+                  import: block_news
+        interactiv:
+          display: Interaktiv
+          instructions: null
+          icon: null
+          sets:
+            carousel:
+              display: Carousel
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_carousel
+            tab_container:
+              display: 'Tab Container'
+              instructions: null
+              icon: null
+              fields: {  }
+        navigation:
+          display: Navigation
+          instructions: null
+          icon: null
+          sets:
+            breadcrumb:
+              display: Breadcrumb
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_breadcrumb
+            image_link:
+              display: Bilderlink
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_image_link
+            button:
+              display: Button
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_button
+        product:
+          display: Produkt
+          instructions: null
+          icon: null
+          sets:
+            product_overview:
+              display: Produktübersicht
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_product_overview
+        special:
+          display: Spezial
+          instructions: null
+          icon: favorite-star
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields: {  }
+        videos:
+          display: Videos
+          instructions: null
+          icon: null
+          sets:
+            youtube_video:
+              display: 'YouTube Videos'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: block_youtube_video
+      type: replicator
+      display: Blocks
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

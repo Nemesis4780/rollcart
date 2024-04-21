@@ -1,0 +1,38 @@
+/* LETS USE SCSS, BECAUSE WE CAN */
+$colors: "secondary", "success", "warning", "danger", "info";
+
+.alert {
+    @apply border px-4 py-3 rounded relative;
+
+    /* PRIMARY */
+    &.alert-primary {
+        @apply bg-primary-100 border-primary-500 text-primary-500;
+    }
+
+    /* EVERTHING ELSE */
+    @each $color in $colors {
+        &.alert-#{$color} {
+            @apply bg-#{$color}-100 border-#{$color}-400 text-#{$color}-700;
+        }
+    }
+
+    /* THE OLD, BORING WAY: */
+    //&.alert-primary {
+    //    @apply bg-primary-100 border-primary-500 text-primary-500;
+    //}
+    //&.alert-secondary {
+    //    @apply bg-secondary-100 border-secondary-400 text-secondary-700;
+    //}
+    //&.alert-success {
+    //    @apply bg-success-100 border-success-400 text-success-700;
+    //}
+    //&.alert-warning {
+    //    @apply bg-warning-100 border-warning-400 text-warning-700;
+    //}
+    //&.alert-danger {
+    //    @apply bg-danger-100 border-danger-400 text-danger-700;
+    //}
+    //&.alert-info {
+    //    @apply bg-info-100 border-info-400 text-info-700;
+    //}
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {{# SEO #}}
+    {{ partial:layout/seo }}
+    {{# END SEO #}}
+
+
+    {{# FAVICON #}}
+{{#     {{ partial:layout/favicon }} #}}
+    {{# END FAVICON #}}
+
+
+    {{# GLOBALS #}}
+        {{ partial:layout/globals }}
+    {{# END GLOBALS #}}
+
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+
+</head>
+
+
+<body>
+
+    <div class="header">
+        {{ partial:layout/header }}
+    </div>
+
+    <div class="content">
+        {{# ALERT/DISTBURBER #}}
+        <div class="mb-10">
+            {{ if content.show_alert && content.show_alert == true && ( ( content.alert_title && content.alert_title != '') || (content.alert_text && content.alert_text != '') ) }}
+                {{ partial:blocks/alert :color_scheme="content.alert_color_scheme" :title="content.alert_title" :text="content.alert_text"  }}
+            {{ /if }}
+        </div>
+        {{# END ALERT/DISTBURBER #}}
+
+
+        {{# BLOCKS #}}
+            {{ template_content }}
+        {{# END BLOCKS #}}
+    </div>
+
+    <div class="footer">
+        {{ partial:layout/footer }}
+    </div>
+
+</body>
+</html>

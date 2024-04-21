@@ -1,0 +1,186 @@
+{{# TODO: I'm not sure, if this still works, if there are two maps ... #}}
+
+<div id="seller-map-{{ block_index }}" class="seller-map grid grid-cols-12 gap-x-8">
+
+    <div class="col-span-8">
+        <div id="map_{{ block_index }}" class=" w-full h-full min-h-[800px]"></div>
+    </div>
+
+    <div class="col-span-4">
+
+        <div class="flex flex-col gap-y-4">
+            <div class="map-countries">
+                {{ seller:mapp }}
+                    <div class="py-1">
+                        <input type="radio" id="country_{{ block_index }}_{{ index }}" name="country_{{ block_index }}" {{ if first }} checked {{ /if }}
+                            class="change_country"
+                            data-country="{{ country.title_short }}"
+                        >
+                        <label for="country_{{ block_index }}_{{ index }}" class="cursor-pointer text-[#575756]">{{ country.title }}</label>
+                    </div>
+                {{ /seller:mapp }}
+            </div>
+
+
+
+            <div class="map-zip-accordion">
+
+                {{ marker_id = 0 }}
+
+
+                {{ seller:mapp }}
+
+                    <div id="accordion-{{ block_index }}_{{ index }}" class="accordion {{ if !first }} hidden {{ /if }}" data-country="{{ country.title_short }}">
+
+                        {{ country_index = index }}
+
+                        {{ zip_codes }}
+
+                            <div class="accordion-item">
+                                <input type="radio" id="accordion-toggle-{{ block_index }}-{{ country_index }}-{{ index }}" name="accordion-toggle-{{ country_index }}" class="accordion-toggle"/>
+                                <label for="accordion-toggle-{{ block_index }}-{{ country_index }}-{{ index }}" class="accordion-label px-5 py-3 text-white bg-[#585757] font-bold block">
+                                    Postleitzahlenbereich {{ zip_code_area }}
+                                </label>
+                                <div class="accordion-content">
+                                    <div class="min-h-0">
+                                        {{ sellers }}
+                                            <a href="#"
+                                                data-marker-id="{{ id }}"
+                                                class="focusMarker group">
+                                                <div class="py-3 pl-16 pr-5 relative group-hover:bg-[#f8f9fa]
+                                                    group-hover:text-[#575756] group-focus:bg-primary-500 group-focus:text-white
+                                                    border border-[1px] border-[#00000020]
+                                                ">
+                                                    <div class="absolute m-4 left-0 top-0 border border-[4px] border-primary-500 text-primary-500 font-bold w-8 h-8 flex justify-center items-center rounded-md
+                                                        group-focus:border-white group-focus:text-white">
+                                                        {{ count }}
+                                                    </div>
+                                                    <strong>{{ name }}</strong><br>
+                                                    {{ street }} {{ street_number }}<br>
+                                                    {{ zip }} {{ place }}
+                                                </div>
+                                            </a>
+
+                                            {{ marker_id += 1 }}
+                                        {{ /sellers }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        {{ /zip_codes }}
+                    </div>
+
+                {{ /seller:mapp }}
+
+    {{#  #}}
+    {{#             {{ seller:map as="key|country_title_short" }} #}}
+    {{#                 <div data-country=""> #}}
+    {{#                     {{ country_title_short }} #}}
+    {{#                 </div> #}}
+    {{#             {{ /seller:map }} #}}
+    {{#              #}}
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        // const center = [51.505, -0.09];
+
+        const center = [
+            {{ seller:mappCenter }}
+                {{ latitude }}, {{ longitude }}
+            {{ /seller:mappCenter }}
+        ];
+
+        const map = L.map('map_{{ block_index }}').setView(center, 7);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        let locations = [
+            {{ seller:mapp }}
+                {{ zip_codes }}
+                    {{ sellers }}
+                        /* [ latitude, longitude, popup-text, seller_id == marker_id ] */
+                        [ {{ latitude }}, {{ longitude }}, '<div class="flex gap-x-4 w-full min-h-[100px]">' +
+                            '<div class="left">' +
+                                '<div class="mb-4"><strong>{{ name }}</strong></div>' +
+                                '<div>{{ street }} {{ street_number }}</div>' +
+                                '<div>{{ zip }} {{ loaction }}</div>' +
+                                {{ if phone }}'<div>Tel: {{ phone }}</div>' + {{ /if }}
+                                {{ if email }}'<div><a href="mailto:{{ email }}" class="!text-primary-500 hover:underline">{{ email }}</a></div>' + {{ /if }}
+                            '</div>' +
+                            '<div class="right">' +
+                                '<img src="{{ glide :src="logo" }}">' +
+                        {{# '<img src="/storage/assets/images/{{ logo }}"/>' +#}}
+                            '</div>' +
+                        '</div>', "{{ id }}" ],
+                    {{ /sellers }}
+                {{ /zip_codes  }}
+            {{ /seller:mapp }}
+        ];
+
+
+        let markers = {};
+        locations.forEach((location) => {
+            markers[ location[3] ] = new L.marker([location[0], location[1]])
+                .bindPopup(location[2])
+                .addTo(map);
+        });
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+
+        /* COUNTRY SELECT */
+        let changeCountries = document.querySelectorAll('#seller-map-{{ block_index }} .change_country');
+
+        changeCountries.forEach((changeCountry) => {
+            changeCountry.addEventListener('change', () => {
+                let country = changeCountry.getAttribute('data-country');
+
+                let accordions = document.querySelectorAll('#seller-map-{{ block_index }} .accordion');
+
+                accordions.forEach((accordion) => {
+                    if(country === accordion.getAttribute('data-country') ) {
+                        accordion.classList.remove('hidden');
+                    } else {
+                        accordion.classList.add('hidden');
+                    }
+
+                });
+
+            });
+        });
+
+
+        /* FOCUS MARKER ON CLICK */
+        let focusMarkers = document.querySelectorAll('#seller-map-{{ block_index }} .focusMarker');
+
+        focusMarkers.forEach( (focusMarker) => {
+            let markerId = focusMarker.getAttribute('data-marker-id');
+            focusMarker.addEventListener('click', (event) => {
+                event.preventDefault();
+                markers[markerId].openPopup();
+            });
+        });
+    });
+
+</script>
+

@@ -1,0 +1,195 @@
+title: 'Block Zweispaltiges Element (DELETE)'
+fields:
+  -
+    handle: ratio
+    field:
+      options:
+        1to1: '1 zu 1'
+        2to1: '2 zu 1'
+        1to2: '1 zu 2'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: 2to1
+      type: select
+      display: Spaltenverhältnis
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: column_left
+    field:
+      options:
+        text: Text
+        images: Bilder
+        youtube: Youtube-Video
+        news: News
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: text
+      type: select
+      display: 'Linke Spalte'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: title_left
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Linker Titel'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text_left
+    field: text.text
+    config:
+      display: 'Linker Text'
+      if:
+        column_left: 'equals text'
+      always_save: true
+  -
+    handle: images_left
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Linke Bilder'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        column_left: 'equals images'
+      always_save: true
+  -
+    handle: youtube_id_left
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Linkes YouTube-Video (#YouTubeId)'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        column_left: 'equals youtube'
+      always_save: true
+  -
+    handle: url_left
+    field:
+      type: link
+      display: 'Linker Link'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: column_right
+    field:
+      options:
+        text: Text
+        images: Bilder
+        youtube: Youtube-Video
+        news: News
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: images
+      type: select
+      display: 'Rechte Spalte'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: title_right
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Rechter Titel'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text_right
+    field: text.text
+    config:
+      display: 'Rechter Text'
+      if:
+        column_right: 'equals text'
+      always_save: true
+  -
+    handle: images_right
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Rechte Bilder'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        column_right: 'equals images'
+      always_save: true
+  -
+    handle: youtube_id_right
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Rechtes YouTube-Video (#YouTubeId)'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      always_save: true
+      if:
+        column_right: 'equals youtube'
+  -
+    handle: url_right
+    field:
+      type: link
+      display: 'Rechter Link'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
