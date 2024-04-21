@@ -1,3 +1,23 @@
+# DENY
+# Deny from all
+# order deny,allow
+# deny from all
+# allow from 127.0.0.1
+
+
+
+# PASSWORD (wabsolute:2VnuOrRrcH)
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /var/www/vhosts/nemesis4780.de/rollcart.nemesis4780.de/public/.htpasswd
+require valid-user
+
+# DISABLE REWRITE ENGINE
+# RewriteEngine Off
+
+
+
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

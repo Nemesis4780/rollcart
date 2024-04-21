@@ -7,6 +7,7 @@ import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
 import "@maptiler/leaflet-maptilersdk";
 
+
 /*
 const map = L.map('map').setView([51.505, -0.09], 13);
 
