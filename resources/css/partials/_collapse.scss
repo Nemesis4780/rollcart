@@ -1,0 +1,34 @@
+/* DEFAULT AND NECESSARY */
+.collapse-item {
+    //.collapse-item {
+        /* HIDE INPUT */
+        .collapse-toggle {
+            @apply hidden h-0 w-0 absolute w-0 z-[-1];
+        }
+
+        /* CRAZY ANIMATION WITHOUT JS */
+        .collapse-content {
+            @apply grid overflow-hidden;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .4s;
+        }
+
+        .collapse-toggle:checked ~ .collapse-content {
+            grid-template-rows: 1fr;
+        }
+
+        .collapse-toggle:checked ~ .collapse-label  {
+            .collapse-icon {
+                @apply rotate-180;
+            }
+        }
+
+    //}
+
+    .collapse-label {
+        @apply cursor-pointer;
+    }
+}
+/* END DEFAULT */
+
+/* CuSTOM STYLE */

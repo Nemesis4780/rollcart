@@ -86,6 +86,13 @@ fields:
               fields:
                 -
                   import: block_news
+            collapse:
+              display: 'Aufklappbarer Text'
+              instructions: null
+              icon: text-formatting-image-bottom
+              fields:
+                -
+                  import: block_collapse
         interactiv:
           display: Interaktiv
           instructions: null
@@ -162,6 +169,13 @@ fields:
               fields:
                 -
                   import: block_two_column_layout
+            login:
+              display: Login
+              instructions: null
+              icon: login-key-2
+              fields:
+                -
+                  import: block_login
         videos:
           display: Videos
           instructions: null

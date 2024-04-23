@@ -144,11 +144,13 @@ fields:
           instructions: null
           icon: favorite-star
           sets:
-            new_set:
-              display: 'New Set'
+            login:
+              display: Login
               instructions: null
-              icon: null
-              fields: {  }
+              icon: login-key-2
+              fields:
+                -
+                  import: block_login
         videos:
           display: Videos
           instructions: null

@@ -1,0 +1,95 @@
+title: 'Block Collapse'
+fields:
+  -
+    handle: elements
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Titel
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: text_short
+          field: text.text
+          config:
+            display: Kurztext
+        -
+          handle: text_collapse
+          field: text.text
+          config:
+            display: 'Weiterer Text'
+        -
+          handle: image
+          field:
+            max_files: 1
+            mode: list
+            container: images
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Bild
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: space
+          field:
+            type: spacer
+            display: Space
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: section_links
+          field:
+            type: section
+            display: 'Optionale Links:'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          import: link
+          prefix: url_
+        -
+          handle: file
+          field:
+            max_files: 1
+            mode: list
+            container: files
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Download
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Elemente
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

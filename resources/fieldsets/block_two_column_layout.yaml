@@ -22,6 +22,16 @@ fields:
       replicator_preview: true
       hide_display: false
   -
+    handle: section_left
+    field:
+      type: section
+      display: 'Linke Spalte:'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: title_left
     field: title.title
     config:
@@ -31,6 +41,16 @@ fields:
     field: subblocks.blocks
     config:
       display: 'Blocks (linke Spalte)'
+  -
+    handle: section_right
+    field:
+      type: section
+      display: 'Rechte Spalte:'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
   -
     handle: title_right
     field: title.title

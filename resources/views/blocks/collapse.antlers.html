@@ -1,0 +1,86 @@
+<section id="block-collapse-{{ block_index }}" class="block block-collapse">
+    <div class="container mx-auto">
+        <div class="row">
+
+            <div class="grid grid-cols-12 gap-x-8 gap-y-16">
+
+                {{ elements }}
+
+                    <div class="col-span-12 lg:col-span-6">
+
+                        <div class="mb-8">
+                            <h2 class="text-xl font-bold uppercase">{{ title }}</h2>
+                            {{ partial:components/hr }}
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-4">
+
+                            <div class="col-span-12 sm:col-span-6 md:col-span-8">
+
+                                <div>
+                                    {{ text_short }}
+                                </div>
+
+                                <div class="collapse-item">
+                                    <input type="checkbox" id="collapse-toggle-{{ block_index }}-{{ index }}" class="collapse-toggle">
+
+                                    {{# COLLAPSE #}}
+                                    {{ if text_collapse }}
+                                        <div class="collapse-content">
+                                            <div class="min-h-0">
+                                                <div class="prose max-w-full pt-4">
+                                                    {{ text_collapse}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <label for="collapse-toggle-{{ block_index }}-{{ index }}"
+                                               class="collapse-label btn btn-secondary flex w-fit items-center gap-x-2 relative !pr-12 mt-4">
+                                            <span class="uppercase">Mehr Info</span>
+                                            <span class="collapse-icon absolute right-4 top-1/2 -translate-y-1/2 duration-200 ease-in">
+                                                {{ svg src="/svg/icons/current_color/angle-down-solid.svg" class="h-5 w-5" }}
+                                            </span>
+                                        </label>
+                                    {{ /if }}
+                                    {{# END COLLAPSE #}}
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                                <img src="{{ glide :src="image" }}" class="w-full mb-3 max-w-[180px] max-h-[250px]"/>
+                            </div>
+                        </div>
+
+
+                        {{# Link #}}
+                        {{ if url_url }}
+                            <a href="{{ url_url }}" {{ if url_blank }} target="_blank" {{ /if }} class="btn btn-secondary flex w-fit items-center gap-x-2">
+                                <span>{{ url_title }}</span>
+                                {{ svg src="/svg/icons/current_color/angle-right-solid.svg" class="h-5 w-5" }}
+                            </a>
+                        {{ /if }}
+                        {{# END Link #}}
+
+
+                        {{# Download #}}
+                        {{ if file }}
+                            {{ partial:components/download color_scheme="secondary" title="Download" }}
+                        {{ /if }}
+                        {{# END Download #}}
+
+                    </div>
+
+
+
+
+                {{ /elements }}
+            </div>
+
+
+        </div>
+    </div>
+</section>

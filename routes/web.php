@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
+// LOGIN
+//Route::statamic('/login', '/login/template', ['layout' => '/layout'] );
+
 // PRODUCTS
 //Route::statamic('/produkte', '/products/template', ['layout' => '/layout'] );
