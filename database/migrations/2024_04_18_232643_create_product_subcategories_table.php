@@ -18,6 +18,15 @@ return new class extends Migration
             $table->string('title');
             $table->integer('sort_order')->default(1000)->nullable();
             $table->integer('category_id')->nullable();
+
+            // SEO
+            $table->string('seo_title')->nullable();
+            $table->mediumText('seo_keywords')->nullable();
+            $table->mediumText('seo_description')->nullable();
+            $table->boolean('seo_index')->default(true);
+            $table->boolean('seo_follow')->default(true);
+
+            // STATAMIC
             $table->string('slug')->nullable();
 
         });

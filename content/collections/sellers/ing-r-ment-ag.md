@@ -20,6 +20,14 @@ longitude: 7.7
 text: 'Der Online-Shop von Ment bietet Ihnen qualitativ hochwertige Hebe-, Förder und Kippeinrichtungen an. Wir sind bekannt für die fachmännische Beratung und freuen uns auf Ihren Besuch.'
 catalog_cover: seller/catalog_cover/ment_ag_catalog.jpg
 updated_by: 1
-updated_at: 1713654217
+updated_at: 1714818795
 country: 3a381cc1-461d-4c8e-a3e5-c4b44c403e25
+marker:
+  street: Liestalerstraße
+  street_number: '33'
+  zip: '4412'
+  place: Nuglar
+  country: Schweiz
+  latitude: '47.4695082'
+  longitude: '7.7015897'
 ---

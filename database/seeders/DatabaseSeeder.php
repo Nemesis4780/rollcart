@@ -34,11 +34,12 @@ class DatabaseSeeder extends Seeder
             'password' => 'T8u9iLfEJBQ0m29E4gEg',
 //            'password' => '$2y$12$rWDfWsH7qtRvjdqRptY4YOosqwVwF0DoAa71Z3mxtC9yyXGgojDf2',
             'super' => true,
-            'preferences' => '{"runway": {"seller": {"columns": ["title", "is_specialist", "is_online_seller", "is_catalog_shipper", "sort_order"]}, "country": {"columns": ["title", "title_short", "sort_order"]}, "product": {"columns": ["title", "subcategory_id", "product_variants", "sort_order"]}, "productcategory": {"columns": ["title", "sort_order"]}, "productvariation": {"columns": ["title", "product_id", "sort_order"]}, "productsubcategory": {"columns": ["title", "category_id", "sort_order"]}}, "collections": {"news": {"columns": ["title", "date", "status"]}, "sellers": {"columns": ["title", "is_specialist", "is_online_seller", "is_catalog_shipper", "status"]}, "countries": {"columns": ["title", "title_short"]}}}'
+            'preferences' => '{"runway": {"shop": {"columns": ["title", "logo", "active"]}, "seller": {"columns": ["title", "is_specialist", "is_online_seller", "is_catalog_shipper", "sort_order"]}, "country": {"columns": ["title", "title_short", "sort_order"]}, "product": {"columns": ["title", "subcategory_id", "product_variants", "sort_order", "slug", "active"]}, "productcategory": {"columns": ["title", "sort_order"]}, "productvariation": {"columns": ["title", "product_id", "sort_order"]}, "productsubcategory": {"columns": ["title", "category_id", "sort_order"]}}, "collections": {"news": {"columns": ["title", "date", "status"]}, "sellers": {"columns": ["title", "is_specialist", "is_online_seller", "is_catalog_shipper", "status"]}, "countries": {"columns": ["title", "title_short"]}}}'
         ]);
 
         $this->call([
             Seller\SellerSeeder::class,
+            Seller\ShopSeeder::class,
             Country\CountrySeeder::class,
             Product\ProductCategorySeeder::class,
 //            Product\ProductSeeder::class,

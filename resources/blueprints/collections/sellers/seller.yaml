@@ -98,6 +98,18 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: marker
+            field:
+              mode: regular
+              secret_agent_features: false
+              type: marker
+              display: Marker
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: Kontakt
         fields:

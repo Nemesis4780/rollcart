@@ -39,6 +39,10 @@ return [
 
     'widgets' => [
         'getting_started',
+        [
+            'type' => 'robots',
+            'width' => 100,
+        ]
     ],
 
     /*

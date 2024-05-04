@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('title');
-            $table->integer('sort_order')->default(1000)->nullable();
+            $table->string('title')->nullable();
+
             $table->integer('product_id')
                 ->references('id')
                 ->on('product')
@@ -24,7 +24,12 @@ return new class extends Migration
             $table->string('slug')->nullable();
 
             $table->string('article_number')->nullable();
-            $table->integer('sku')->nullable();
+//            $table->integer('sku')->nullable();
+
+
+            // STATAMIC
+            $table->boolean('active')->dafault(true);
+            $table->integer('sort_order')->default(1000)->nullable();
 
         });
     }

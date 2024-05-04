@@ -17,5 +17,13 @@ country: eb583822-9b16-435b-8fde-9cb9e479ccae
 latitude: 52.47
 longitude: 13.56
 updated_by: 1
-updated_at: 1713651897
+updated_at: 1714783527
+marker:
+  street: 'Köpenicker Straße'
+  street_number: '235'
+  zip: '12555'
+  place: Berlin
+  country: Deutschland
+  latitude: '52.4696411'
+  longitude: '13.5535745'
 ---

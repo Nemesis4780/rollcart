@@ -51,6 +51,7 @@ return new class extends Migration
             $table->boolean('is_online_seller')->default(false);
             $table->boolean('is_catalog_shipper')->default(false);
 
+            // STATAMIC
             $table->integer('sort_order')->default(1000)->nullable();
 
         });

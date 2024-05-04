@@ -1,0 +1,13 @@
+nav:
+  reorder: true
+  sections:
+    top_level: '@inherit'
+    content: '@inherit'
+    produkte:
+      action: '@create'
+      display: Produkte
+      items:
+        'content::produkte': '@move'
+        'content::kategorien': '@move'
+        'content::unterkategorien': '@move'
+        'content::produktvarianten': '@move'

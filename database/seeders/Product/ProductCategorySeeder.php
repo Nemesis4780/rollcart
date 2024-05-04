@@ -18,6 +18,8 @@ class ProductCategorySeeder extends Seeder
     public function run()
     {
 
+
+
         $product_categories = [
             [ 'title' => 'Platformwage', 'sort_order' => 10 ],
             [ 'title' => 'Tisch-, Werkstatt-, Montagewagen', 'sort_order' => 20 ],

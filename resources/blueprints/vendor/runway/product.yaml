@@ -16,6 +16,19 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 75
+          -
+            handle: active
+            field:
+              default: true
+              type: toggle
+              display: Aktiv
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: description
             field:
@@ -115,24 +128,25 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: subcategory_id
+            handle: sort_order
             field:
-              max_items: 1
-              mode: default
-              resource: productsubcategory
-              create: true
-              type: belongs_to
-              display: Unterkategorie
+              type: integer
+              display: Sortierung
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: sort_order
+            handle: subcategory_id
             field:
-              type: integer
-              display: Sortierung
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - products
+              type: entries
+              display: Unterkategorie
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -152,6 +166,14 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+            prefix: seo_
   sidebar:
     display: Sidebar
     sections:

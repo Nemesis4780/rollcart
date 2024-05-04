@@ -5,18 +5,6 @@ tabs:
       -
         fields:
           -
-            handle: active
-            field:
-              default: true
-              type: toggle
-              display: Aktiv
-              width: 25
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
             handle: title
             field:
               input_type: text
@@ -24,6 +12,18 @@ tabs:
               type: text
               display: Titel
               width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: active
+            field:
+              default: true
+              type: toggle
+              display: Aktiv
+              width: 25
               listable: hidden
               instructions_position: above
               visibility: visible

@@ -16,6 +16,19 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 75
+          -
+            handle: active
+            field:
+              default: true
+              type: toggle
+              display: Aktiv
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: product_id
             field:
@@ -35,6 +48,18 @@ tabs:
             field:
               type: integer
               display: Sortierung
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: article_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Artikelnummer
               listable: hidden
               instructions_position: above
               visibility: visible
